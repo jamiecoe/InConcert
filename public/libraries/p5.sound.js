@@ -8471,7 +8471,7 @@
       this.input = ac.createGain();
       this.output = ac.createGain();
       this.recording = false;
-      this.bufferSize = 1024;
+      this.bufferSize = 2048;
       this._channels = 2;
       // stereo (default)
       this._clear();
