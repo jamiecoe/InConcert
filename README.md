@@ -24,7 +24,7 @@ Classes include:
 
 Here is a reference list for code which I have adapted from other's work. I have also made it clear at these code sections that the code has been re-used.
 
-- jscolor.js by Jan Odvarko
+- jscolor.js by Jan Odvarko (see http://jscolor.com)
 
 - 'Chapter 6 - Autonomous Agents' from the book The Nature Of Code by Daniel Shiffman.
 
