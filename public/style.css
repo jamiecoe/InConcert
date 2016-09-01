@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "AvenirNextLTW01-Medium";
+    src: url("http://db.onlinewebfonts.com/t/9846cd151ac9771b0716cb40af5959e3.eot");
+    src: url("http://db.onlinewebfonts.com/t/9846cd151ac9771b0716cb40af5959e3.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/9846cd151ac9771b0716cb40af5959e3.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/9846cd151ac9771b0716cb40af5959e3.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/9846cd151ac9771b0716cb40af5959e3.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/9846cd151ac9771b0716cb40af5959e3.svg#AvenirNextLTW01-Medium") format("svg");
+}
+
+body {
+      padding: 0; margin: 0;
+      background: black;
+} 
+
+#red {
+      color: #ff0000;
+}
+
+#green {
+      color: #00ff00;
+}
+
+#blue {
+      color: #0000ff;
+}
+
+.myButton {
+      background-color: black;
+}
+
+.myButton:hover {
+      background-color: grey;
+}
+    
+canvas {
+      vertical-align: top;
+}
+
+
+
+
+
+

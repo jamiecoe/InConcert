@@ -1,0 +1,263 @@
+{
+  "tracks":[
+    {
+      "trackPath": "sounds/JamieCoe_Sometimes.mp3",
+      "trackSamplesPath": [
+        "sounds/JamieCoe_Sometimes/0.wav",
+        "sounds/JamieCoe_Sometimes/1.wav",
+        "sounds/JamieCoe_Sometimes/2.wav",
+        "sounds/JamieCoe_Sometimes/3.wav",
+        "sounds/JamieCoe_Sometimes/4.wav",
+        "sounds/JamieCoe_Sometimes/5.wav",
+        "sounds/JamieCoe_Sometimes/6.wav",
+        "sounds/JamieCoe_Sometimes/7.wav",
+        "sounds/JamieCoe_Sometimes/8.wav",
+        "sounds/JamieCoe_Sometimes/9.wav"
+      ],
+      "name": "Jamie Coe - Sometimes",
+      "description": "This song was inspired by the often one-sidedness of songwriting, and how everything always seems right from your perspective. I tried to avoid using any recognisable instruments, making everything with a sampler.",
+      "col": "#3366ff",
+      "id": 1,
+      "childList": "<span class=\"1\">Maya Yianni - Snooze</span><br><span class=\"2\">Jamie Coe - Semlttmes</span><br><span class=\"3\">Anonymous - Tell Them In Song</span><br><span class=\"4\">Jamie Coe - Sooezi</span><br><span class=\"6\">CoeCollective - The Jaime Song</span><br><span class=\"7\">Gregory White - Cukkoo Clock</span><br>",
+      "parents": [
+        0, 
+        0
+      ],
+      "children": [
+        2, 
+        3, 
+        4, 
+        5, 
+        7, 
+        8
+      ],
+      "family": [
+        2, 
+        3, 
+        4, 
+        5, 
+        7, 
+        8
+      ]
+    }, 
+    {
+      "trackPath": "sounds/MayaYianni_Snooze.mp3",
+      "trackSamplesPath": [
+        "sounds/MayaYianni_Snooze/0.wav",
+        "sounds/MayaYianni_Snooze/1.wav",
+        "sounds/MayaYianni_Snooze/2.wav",
+        "sounds/MayaYianni_Snooze/3.wav",
+        "sounds/MayaYianni_Snooze/4.wav",
+        "sounds/MayaYianni_Snooze/5.wav",
+        "sounds/MayaYianni_Snooze/6.wav",
+        "sounds/MayaYianni_Snooze/7.wav",
+        "sounds/MayaYianni_Snooze/8.wav",
+        "sounds/MayaYianni_Snooze/9.wav"
+      ],
+      "name": "Maya Yianni - Snooze",
+      "description": "I wrote this track using <span class=\"0\">Jamie Coe - Sometimes</span>. The intro keyboard part reminded me of an iPhone wake-up alarm, so I wrote a song about not wanting to wake up in the morning.",
+      "col": "#ff3399",
+      "id": 2,
+      "childList": "<span class=\"4\">Jamie Coe - Sooezi</span><br><span class=\"5\">Jamie Coe - Tnlo e</span><br>",
+      "parents": [
+        1, 
+        0
+      ],
+      "children": [
+        5,
+        6
+      ],
+      "family": [
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "trackPath": "sounds/JamieCoe_Semlttmes.mp3",
+      "trackSamplesPath": [
+        "sounds/JamieCoe_Semlttmes/0.wav",
+        "sounds/JamieCoe_Semlttmes/1.wav",
+        "sounds/JamieCoe_Semlttmes/2.wav",
+        "sounds/JamieCoe_Semlttmes/3.wav",
+        "sounds/JamieCoe_Semlttmes/4.wav",
+        "sounds/JamieCoe_Semlttmes/5.wav",
+        "sounds/JamieCoe_Semlttmes/6.wav",
+        "sounds/JamieCoe_Semlttmes/7.wav",
+        "sounds/JamieCoe_Semlttmes/8.wav",
+        "sounds/JamieCoe_Semlttmes/9.wav"
+      ],
+      "name": "Jamie Coe - Semlttmes",
+      "description": "This track was made out of a convolution of <span class=\"0\">Jamie Coe - Sometimes</span> and <span class=\"3\">Anonymous - Tell Them In Song</span>",
+      "col": "#3366ff",
+      "id": 3,
+      "childList": "",
+      "parents": [
+        1, 
+        4
+      ],
+      "children": [
+        
+      ],
+      "family": [
+        1, 
+        4
+      ]
+    },
+    {
+      "trackPath": "sounds/HarriChambers_TellThemInSong.mp3",
+      "trackSamplesPath": [
+        "sounds/HarriChambers_TellThemInSong/0.wav",
+        "sounds/HarriChambers_TellThemInSong/1.wav",
+        "sounds/HarriChambers_TellThemInSong/2.wav",
+        "sounds/HarriChambers_TellThemInSong/3.wav",
+        "sounds/HarriChambers_TellThemInSong/4.wav",
+        "sounds/HarriChambers_TellThemInSong/5.wav",
+        "sounds/HarriChambers_TellThemInSong/6.wav",
+        "sounds/HarriChambers_TellThemInSong/7.wav",
+        "sounds/HarriChambers_TellThemInSong/8.wav",
+        "sounds/HarriChambers_TellThemInSong/9.wav"
+      ],
+      "name": "Anonymous - Tell Them In Song",
+      "description": "I made this song using the audio stems of <span class=\"0\">Jamie Coe - Sometimes</span>",
+      "col": "#dd99ff",
+      "id": 4,
+      "childList": "<span class=\"2\">Jamie Coe - Semlttmes</span><br><span class=\"5\">Jamie Coe - Tnlo e</span><br>",
+      "parents": [
+        1,
+        0
+      ],
+      "children": [
+        3, 
+        6
+      ],
+      "family": [
+        1, 
+        3, 
+        6
+      ]
+    },
+    {
+      "trackPath": "sounds/JamieCoe_Sooezi.mp3",
+      "trackSamplesPath": [
+        "sounds/JamieCoe_Sooezi/0.wav",
+        "sounds/JamieCoe_Sooezi/1.wav",
+        "sounds/JamieCoe_Sooezi/2.wav",
+        "sounds/JamieCoe_Sooezi/3.wav",
+        "sounds/JamieCoe_Sooezi/4.wav",
+        "sounds/JamieCoe_Sooezi/5.wav",
+        "sounds/JamieCoe_Sooezi/6.wav",
+        "sounds/JamieCoe_Sooezi/7.wav",
+        "sounds/JamieCoe_Sooezi/8.wav",
+        "sounds/JamieCoe_Sooezi/9.wav"
+      ],
+      "name": "Jamie Coe - Sooezi",
+      "description": "This track was made out of a convolution of <span class=\"0\">Jamie Coe - Sometimes</span> and <span class=\"1\">Maya Yianni - Snooze</span>",
+      "col": "#3366ff",
+      "id": 5,
+      "childList": "",
+      "parents": [
+        1, 
+        2
+      ],
+      "children": [
+        
+      ],
+      "family": [
+        1, 
+        2
+      ]
+    },
+    {
+      "trackPath": "sounds/JamieCoe_Tnlo_e.mp3",
+      "trackSamplesPath": [
+        "sounds/JamieCoe_Tnlo_e/0.wav",
+        "sounds/JamieCoe_Tnlo_e/1.wav",
+        "sounds/JamieCoe_Tnlo_e/2.wav",
+        "sounds/JamieCoe_Tnlo_e/3.wav",
+        "sounds/JamieCoe_Tnlo_e/4.wav",
+        "sounds/JamieCoe_Tnlo_e/5.wav",
+        "sounds/JamieCoe_Tnlo_e/6.wav",
+        "sounds/JamieCoe_Tnlo_e/7.wav",
+        "sounds/JamieCoe_Tnlo_e/8.wav",
+        "sounds/JamieCoe_Tnlo_e/9.wav"
+      ],
+      "name": "Jamie Coe - Tnlo e",
+      "description": "This track was made out of a convolution of <span class=\"1\">Maya Yianni - Snooze</span> and <span class=\"3\">Anonymous - Tell Them In Song</span>",
+      "col": "#3366ff",
+      "id": 6,
+      "childList": "",
+      "parents": [
+        2, 
+        4
+      ],
+      "children": [
+        
+      ],
+      "family": [
+        2, 
+        4
+      ]
+    },
+    {
+      "trackPath": "sounds/CoeCollective_TheJaimeSong.mp3",
+      "trackSamplesPath": [
+        "sounds/CoeCollective_TheJaimeSong/0.wav",
+        "sounds/CoeCollective_TheJaimeSong/1.wav",
+        "sounds/CoeCollective_TheJaimeSong/2.wav",
+        "sounds/CoeCollective_TheJaimeSong/3.wav",
+        "sounds/CoeCollective_TheJaimeSong/4.wav",
+        "sounds/CoeCollective_TheJaimeSong/5.wav",
+        "sounds/CoeCollective_TheJaimeSong/6.wav",
+        "sounds/CoeCollective_TheJaimeSong/7.wav",
+        "sounds/CoeCollective_TheJaimeSong/8.wav",
+        "sounds/CoeCollective_TheJaimeSong/9.wav"
+      ],
+      "name": "CoeCollective - The Jaime Song",
+      "description": "I made this song using <span class=\"0\">Jamie Coe - Sometimes</span> and applying feedback",
+      "col": "#99ccff",
+      "id": 7,
+      "childList": "",
+      "parents": [
+        1, 
+        0
+      ],
+      "children": [
+        
+      ],
+      "family": [
+        1
+      ]
+    },
+    {
+      "trackPath": "sounds/GregWhite_CukkooClock.mp3",
+      "trackSamplesPath": [
+        "sounds/GregWhite_CukkooClock/0.wav",
+        "sounds/GregWhite_CukkooClock/1.wav",
+        "sounds/GregWhite_CukkooClock/2.wav",
+        "sounds/GregWhite_CukkooClock/3.wav",
+        "sounds/GregWhite_CukkooClock/4.wav",
+        "sounds/GregWhite_CukkooClock/5.wav",
+        "sounds/GregWhite_CukkooClock/6.wav",
+        "sounds/GregWhite_CukkooClock/7.wav",
+        "sounds/GregWhite_CukkooClock/8.wav",
+        "sounds/GregWhite_CukkooClock/9.wav"
+      ],
+      "name": "Gregory White - Cukkoo Clock",
+      "description": "I took the cukkoo clock part from <span class=\"0\">Jamie Coe - Sometimes</span> and experimented with a custom built delay",
+      "col": "#ffffff",
+      "id": 8,
+      "childList": "",
+      "parents": [
+        1, 
+        0
+      ],
+      "children": [
+        
+      ],
+      "family": [
+        1
+      ]
+    }
+  ]
+}  
