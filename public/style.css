@@ -37,6 +37,13 @@ canvas {
       vertical-align: top;
 }
 
+html{
+  overflow:hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 
 

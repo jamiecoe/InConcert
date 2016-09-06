@@ -201,6 +201,8 @@ function AudioPlayer() {
     else if (!this.currentTrack.isPlaying()) {
       // draw the play symbol
       triangle(this.newButtonX - 14, this.newButtonY - 20, this.newButtonX + 26, this.newButtonY, this.newButtonX - 14, this.newButtonY + 20);
+      // Saftey measure to make sure it's paused
+      this.currentTrack.pause();
     }
 
   } // End of shapePlayerDisplay() function
@@ -249,7 +251,8 @@ function AudioPlayer() {
       // Check if the user has clicked on you, and return your track or nothing
       selectedTrack[i] = this.soundShapes[i].checkTrack(mouseX, mouseY);
       // If you have return your track and it's not one already playing
-      if (selectedTrack[i] !== null && selectedTrack[i] !== this.currentTrack) {
+      if (selectedTrack[i] !== null && !selectedTrack[i].isPlaying()) {
+        // Change to that track
         this.changeTrack(i);
       }
     }

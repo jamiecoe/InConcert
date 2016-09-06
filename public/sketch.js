@@ -48,7 +48,7 @@ var tracks = []; // Array of tracks
 var audioPlayer; // AudioPlayer object
 var helpMenu; // Help Menu object
 var myFont; // Global font style
-var sizeConstant = 800 // Variable to help determine size of shapes;
+var sizeConstant = 1000 // Variable to help determine size of shapes;
   //var soundShapeIndex
 var randomShape; // Variable to hold random shape which is initially loaded into audioplayer
 //var songLinkIndex;
@@ -142,6 +142,10 @@ function setup() {
 
   // Create a BinaryJS connection on port 9000
   client = new BinaryClient('ws://localhost:9000');
+  
+  //setInterval(myDraw, 1000/30);
+  window.requestAnimationFrame(myDraw);
+
 
 }
 
@@ -210,7 +214,7 @@ function mousePressed() {
   // If not in remixMode
   if (!remixMode) {
     // Check if you've clicked on a soundShape and play it with the audioPlayer
-    audioPlayer.checkSoundShapes(soundShapes);
+    audioPlayer.checkSoundShapes();
     // Use the audioPlayer manual controls with the mouse
     audioPlayer.newManualControls(mouseX, mouseY);
 
@@ -267,7 +271,7 @@ function mouseDragged() {
 }
 
 
-function draw() {
+function myDraw() {
 
   // Set the background to black
   background(0);
@@ -379,15 +383,27 @@ function draw() {
     fill(255);
     // Align text to center
     textAlign(CENTER);
+    // Set text size
+    textSize(20);
     // Variable to hold counter position as a percentage value (ie: how many tracks have been loaded in a percentage value)
     var percentage = floor(map(counter, 0, data.tracks.length, 0, 100));
     // Write Loading and give percentage of how much is loaded
     text('LOADING' + '\n' + percentage + '%', width / 2, height / 2);
   }
+  
+  
+  window.requestAnimationFrame(myDraw);
 }
 
 
 // Dynamically update canvas based on window size
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+
+// Function called when key pressed
+function keyPressed() {
+  // Exhibition safety measure, if something goes wrong, press escape to refresh page
+  if(keyCode === ESCAPE) location.reload();
 }

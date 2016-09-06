@@ -374,6 +374,9 @@ function CircleSequencer() {
 
     // Set remix mode to false
     remixMode = false;
+    // Reset so Show All Links is false
+    showLinks = false;
+    helpMenu.showLinksButton.html('Show All Connections');
   }
 
 

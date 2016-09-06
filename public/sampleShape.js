@@ -99,9 +99,10 @@ function SampleShape(posX, posY, sample) {
     // Close Matrix
     resetMatrix();
     
-    // When saving remix with inputForm, return all sampleShapes to their original position
+    // When saving remix with inputForm, return all sampleShapes to their original position and color
     if(circleSequencer.saveMode) {
       this.returnToOgPosition();
+      this.c = color(helpMenu.currentSoundShape.hexValue);
     }
     
   }
