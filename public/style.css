@@ -206,8 +206,8 @@ html{
 }
 
 #recordMessage {
-  margin:auto;
   color:white;
+  text-align: center;
   background-color:red;
   border: 1px;
   border-radius: 2px;

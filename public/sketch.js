@@ -382,7 +382,7 @@ function myDraw() {
       tempoMessage.hide();
 
       recordMessage.show();
-      recordMessage.position(width / 2 + 400, height / 2);
+      recordMessage.position(width / 2 + 380, height / 2 - 210);
       
 
     } else {
