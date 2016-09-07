@@ -20,7 +20,7 @@
       "description": "This song was inspired by the often one-sidedness of songwriting, and how everything always seems right from your perspective. I tried to avoid using any recognisable instruments, making everything with a sampler.",
       "col": "#3366ff",
       "id": 1,
-      "childList": "<span class=\"1\">Maya Yianni - Snooze</span><br><span class=\"2\">Jamie Coe - Semlttmes</span><br><span class=\"3\">Anonymous - Tell Them In Song</span><br><span class=\"4\">Jamie Coe - Sooezi</span><br><span class=\"6\">CoeCollective - The Jaime Song</span><br><span class=\"7\">Gregory White - Cukkoo Clock</span><br>",
+      "childList": "<span class=\"1\">Maya Yianni - Snooze</span><br><span class=\"2\">Steve The Convolver - Semlttmes</span><br><span class=\"3\">Anonymous - Tell Them In Song</span><br><span class=\"4\">Steve The Convolver - Sooezi</span><br><span class=\"6\">CoeCollective - The Jaime Song</span><br><span class=\"7\">Gregory White - Cukkoo Clock</span><br>",
       "parents": [
         0, 
         0
@@ -62,7 +62,7 @@
       "description": "I wrote this track using <span class=\"0\">Jamie Coe - Sometimes</span>. The intro keyboard part reminded me of an iPhone wake-up alarm, so I wrote a little song about not wanting to wake up in the morning.",
       "col": "#ff3399",
       "id": 2,
-      "childList": "<span class=\"4\">Jamie Coe - Sooezi</span><br><span class=\"5\">Jamie Coe - Tnlo e</span><br>",
+      "childList": "<span class=\"4\">Steve The Convolver - Sooezi</span><br><span class=\"5\">Steve The Convolver - Tnlo e</span><br>",
       "parents": [
         1, 
         0
@@ -130,7 +130,7 @@
       "description": "I made this song using the audio stems of <span class=\"0\">Jamie Coe - Sometimes</span>. For the intro, I re-recorded the track being played through a wall to make it sound muffled, and then reverted back to the dry stems when the drums come in.",
       "col": "#dd99ff",
       "id": 4,
-      "childList": "<span class=\"2\">Jamie Coe - Semlttmes</span><br><span class=\"5\">Jamie Coe - Tnlo e</span><br>",
+      "childList": "<span class=\"2\">Steve The Convolver - Semlttmes</span><br><span class=\"5\">Steve The Convolver - Tnlo e</span><br><span class=\"8\">Jamie Coe - Short Sighted</span><br>",
       "parents": [
         1,
         0

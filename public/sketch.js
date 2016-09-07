@@ -48,7 +48,7 @@ var tracks = []; // Array of tracks
 var audioPlayer; // AudioPlayer object
 var helpMenu; // Help Menu object
 var myFont; // Global font style
-var sizeConstant = 1000 // Variable to help determine size of shapes;
+var sizeConstant = 1100 // Variable to help determine size of shapes;
   //var soundShapeIndex
 var randomShape; // Variable to hold random shape which is initially loaded into audioplayer
 //var songLinkIndex;
@@ -134,8 +134,8 @@ function setup() {
   // Create new CircleSequencer object
   circleSequencer = new CircleSequencer();
 
-  // Create a Slider DOM element, with a range between 60bpm and 180bpm, starting at 90bpm and moving in increments of 1bpm
-  tempoSlider = createSlider(60, 180, 90, 1);
+  // Create a Slider DOM element, with a range between 60bpm and 140bpm, starting at 90bpm and moving in increments of 1bpm
+  tempoSlider = createSlider(60, 140, 90, 1);
 
   // Create a SocketIO connection on port 9000
   socket = io.connect('http://localhost:9000');
@@ -162,7 +162,7 @@ function newShape() {
   counter++;
 
   // If all the shapes have been loaded, call the finishSetup() function
-  if (counter >= data.tracks.length - 1) {
+  if (counter == data.tracks.length) {
     finishSetup();
   }
 }
@@ -205,6 +205,8 @@ function finishSetup() {
   }
 
   everythingLoaded = true; // Set everything loaded to be true
+  
+  console.log('finished');
 }
 
 

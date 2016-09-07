@@ -41,8 +41,12 @@ html{
   overflow:hidden;
 }
 
+/*div{*/
+/*  overflow:visible;*/
+/*}*/
+
 ::-webkit-scrollbar { 
-    display: none; 
+    display: visible; 
 }
 
 

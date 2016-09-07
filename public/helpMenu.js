@@ -31,7 +31,7 @@ function HelpMenu() {
   // About Project Title
   this.aboutTitle = createElement('h1', 'In Concert');
   // About Project description
-  this.aboutDescription = createP('In Concert is a web application for an experimental music collaboration project, inspired by open-source principles. Musicians and non-musicians openly share ideas and source materials. Creativity does not exist in a vacuum.<br /><br />Listen to the SoundShapes by clicking on them, and reveal their connections. Each SoundShape has an explanation of how it was made and why it is connected to other SoundShapes.<br /><br />Colour is used to represent different artists. You can click on a track\'s name in this help menu to skip to it<br /><br />Would you like to create your own remix?<br /><br />Some of the SoundShapes have a \'Click To Remix\' button which opens up the In Concert \'Circle Sequencer\', a fun and easy tool for making a quick remix. Record and save your remix to add your own SoundShape to In Concert.');
+  this.aboutDescription = createP('In Concert is a web application for an experimental music collaboration project, inspired by open-source principles. Musicians and non-musicians openly share ideas and source materials. Creativity does not exist in a vacuum.<br /><br />Listen to the SoundShapes by clicking on them and reveal their connections. Each SoundShape has an explanation of how it was made and why it is connected to other SoundShapes.<br /><br />Colour is used to represent different artists. You can click on a track\'s name in this Help Menu to skip to it<br /><br />Would you like to create your own remix?<br /><br />Some of the SoundShapes have a \'Click To Remix\' button which opens up the In Concert \'Circle Sequencer\', a fun and easy tool for making a quick remix. Record and save your remix to add your own SoundShape to In Concert.');
   // About Project back button
   this.aboutBackButton = createButton('Back');
   // Assign it to button class so it highlights when you hover over it
@@ -281,7 +281,7 @@ function HelpMenu() {
 
         // Update these with remix title and description
         this.shapeName.html('Create a Remix');
-        this.shapeDescription.html('Drag the SoundShapes onto the white circles (make sure they lock in).<br /><br />To record your remix, press the <span id="red">red</span> button in the middle of the Circle Sequencer.<br /><br />Press the <span id="green">green</span> button to finish recording.');
+        this.shapeDescription.html('Drag the SampleShapes onto the white circles (make sure they lock in).<br /><br />To record your remix, press the <span id="red">red</span> button in the middle of the Circle Sequencer. Hint: You can still move the SampleShapes and change the tempo while you are recording your remix.<br /><br />Press the <span id="green">green</span> button to finish recording.');
 
         // New styling 
         this.shapeName.style("color", "white");
@@ -361,7 +361,7 @@ function HelpMenu() {
     // SampleShapes array must be empty first
     if (sampleShapes.length < 1) {
       // Loop through 10 samples as a 5 x 2 table
-      for (var i = 0; i < 6; i++) {
+      for (var i = 0; i < 5; i++) {
         for (var k = 0; k < 2; k++) {
           // Add a new sampleShape to array
           sampleShapes.push(new SampleShape(100 * (k + 1), 100 * (i + 1) + 100, samples[samplesId][counter]));
