@@ -141,20 +141,20 @@ function AudioPlayer() {
     // Draw closed shape with point location array
     beginShape();
     // First vertex is control point which must start at the end of the array
-    curveVertex(pointLocationX[this.waveform.length - 1], pointLocationY[this.waveform.length - 1]);
+    //curveVertex(pointLocationX[this.waveform.length - 1], pointLocationY[this.waveform.length - 1]);
 
     // For all the waveform array
     for (var i = 0, j = this.waveform.length; i < j; i++) {
       // Add a vertex at the point location
-      curveVertex(pointLocationX[i], pointLocationY[i]);
+      vertex(pointLocationX[i], pointLocationY[i]);
     }
 
     // Close up vertex back at the beginning
-    curveVertex(pointLocationX[0], pointLocationY[0]);
+    //curveVertex(pointLocationX[0], pointLocationY[0]);
     // Last vertex is control point which must start at the 2nd position of the array
-    curveVertex(pointLocationX[1], pointLocationY[1]);
+    //curveVertex(pointLocationX[1], pointLocationY[1]);
 
-    endShape();
+    endShape(CLOSE);
 
 
     // Playhead circle
@@ -163,18 +163,18 @@ function AudioPlayer() {
     // Draw closed shape with point location array
     beginShape();
     // First vertex is control point which must start at the end of the array
-    curveVertex(playHeadPointLocationX[this.waveform.length - 1], playHeadPointLocationY[this.waveform.length - 1]);
+    //curveVertex(playHeadPointLocationX[this.waveform.length - 1], playHeadPointLocationY[this.waveform.length - 1]);
     // For all the waveform array
     for (var i = 0, j = this.waveform.length; i < j; i++) {
       // Add a vertex at the playhead point location
-      curveVertex(playHeadPointLocationX[i], playHeadPointLocationY[i]);
+      vertex(playHeadPointLocationX[i], playHeadPointLocationY[i]);
     }
     // Close up vertex back at the beginning
-    curveVertex(playHeadPointLocationX[0], playHeadPointLocationY[0]);
+    //curveVertex(playHeadPointLocationX[0], playHeadPointLocationY[0]);
     // Last vertex is control point which must start at the 2nd position of the array
-    curveVertex(playHeadPointLocationX[1], playHeadPointLocationY[1]);
+    //curveVertex(playHeadPointLocationX[1], playHeadPointLocationY[1]);
 
-    endShape();
+    endShape(CLOSE);
 
 
     // Draw actual playhead
@@ -201,8 +201,6 @@ function AudioPlayer() {
     else if (!this.currentTrack.isPlaying()) {
       // draw the play symbol
       triangle(this.newButtonX - 14, this.newButtonY - 20, this.newButtonX + 26, this.newButtonY, this.newButtonX - 14, this.newButtonY + 20);
-      // Saftey measure to make sure it's paused
-      this.currentTrack.pause();
     }
 
   } // End of shapePlayerDisplay() function

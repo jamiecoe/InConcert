@@ -38,12 +38,184 @@ canvas {
 }
 
 html{
-  overflow:hidden;
+  		overflow:hidden;
 }
 
-/*div{*/
-/*  overflow:visible;*/
-/*}*/
+#helpDiv {
+	font-family: "AvenirNextLTW01-Medium";
+	background-color: black;
+	border: 1px;
+	border-style: dashed;
+	border-color: white;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#defaultMessage {
+  color:white;
+  text-align: center;
+  top: 40%;
+  margin-left: 10px;
+}
+
+#aboutButton {
+  margin:auto;
+  position: absolute;
+  text-align: center;
+  bottom: 35%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  border: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: white;
+  cursor: pointer;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-family: "AvenirNextLTW01-Medium"; 
+}
+
+#showLinksButton {
+  margin:auto;
+  position: absolute;
+  text-align: center;
+  bottom: 15%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  border: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: white;
+  cursor: pointer;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-family: "AvenirNextLTW01-Medium"; 
+}
+
+#aboutTitle {
+	color:white;
+	text-align: center;
+	padding: 0 5px;
+}
+
+#aboutDescription {
+	color:white;
+	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#aboutBackButton {
+	margin:auto;
+  	margin-bottom: 20px;
+  	color: white;
+  	border: 1px;
+  	border-radius: 2px;
+  	border-style: solid;
+  	border-color: white;
+  	cursor: pointer;
+  	padding: 10px 24px;
+  	font-size: 16px;
+  	font-family: "AvenirNextLTW01-Medium"; 
+}
+
+#shapeName {
+	text-align: center;
+	padding: 0 5px;
+}
+
+#shapeDescription {
+	color: white;
+	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#remixButton {
+	margin:auto;
+  	margin-bottom: 20px;
+  	color: white;
+  	border: 1px;
+  	border-radius: 2px;
+  	border-style: solid;
+  	border-color: white;
+  	cursor: pointer;
+  	padding: 10px 24px;
+  	font-size: 16px;
+  	font-family: "AvenirNextLTW01-Medium"; 
+}
+
+#childTitle {
+	color: white;
+	text-align: left;
+	margin-left: 10px;
+}
+
+#childList {
+	text-align: left;
+	margin-left: 10px;
+}
+
+#formDiv {
+	font-family: "AvenirNextLTW01-Medium";
+	background-color: #d9d9d9; 
+}
+
+#exit {
+	position: absolute;
+	right: 0px;
+	width: 20px;
+	padding: 5px;
+	padding-bottom: 20px;
+	cursor: pointer;
+}
+
+#title {
+	color: black;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.formHeading {
+	color: black;
+	text-align: left;
+	margin-left: 10px;
+}
+
+.formInput {
+	text-align: left;
+	margin-left: 10px;
+}
+
+#submitButton {
+	text-align: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	font-family: "AvenirNextLTW01-Medium";
+}
+
+#tempoMessage {
+  color:white;
+  text-align: center;
+  font-family: "AvenirNextLTW01-Medium";
+}
+
+#recordMessage {
+  margin:auto;
+  color:white;
+  background-color:red;
+  border: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  border-color: white;
+  padding: 10px 24px;
+  font-family: "AvenirNextLTW01-Medium";
+}
 
 ::-webkit-scrollbar { 
     display: visible; 

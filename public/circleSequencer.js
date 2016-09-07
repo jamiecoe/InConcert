@@ -247,7 +247,7 @@ function CircleSequencer() {
     }
 
 
-    // If we are in saveMode
+    // If we are in saveMode or recording
     if (this.saveMode) {
       // Run the input form
       this.inputForm.run();
@@ -348,6 +348,18 @@ function CircleSequencer() {
     circleSequencer.backButton.hide();
     // Hide tempo slider
     tempoSlider.hide();
+    
+    // if you were recording reset this
+    circleSequencer.recordState = false;
+    
+    if(circleSequencer.state == 1) {
+       // Stop the recording
+        circleSequencer.recorder.stop();
+        // Reset finalSoundFile to a new empty SoundFile
+        circleSequencer.finalSoundFile = new p5.SoundFile();
+        // Reset state to 0
+        circleSequencer.state = 0;  
+    }
 
     // For all sampleShapes
     for (var i = 0, j = sampleShapes.length; i < j; i++) {

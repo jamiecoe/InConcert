@@ -4,6 +4,8 @@ function InputForm() {
   
   // Create new Div
   this.formDiv = createDiv('');
+  // set id
+  this.formDiv.id("formDiv");
   // Set size
   this.size = 400;
   // Set x and y to middle of the screen
@@ -13,26 +15,46 @@ function InputForm() {
   this.savingMode = false;
   // Little X image for exiting menu
   this.exit = createImg('assets/exit.png');
+  // set id
+  this.exit.id("exit");
   // Title of inputForm
   this.title = createElement('h1', 'Save Your SoundShape');
+  // set id
+  this.title.id("title");
   // Artist Name label
   this.artistName = createP('Your Name:');
+  // set class
+  this.artistName.class("formHeading");
   // Artist Name input box
   this.nameInput = createInput('');
+  // set class
+  this.nameInput.class("formInput");
   // Track Name label
   this.trackName = createP('Track Name:');
+  // set class
+  this.trackName.class("formHeading")
   // Track Name input box
   this.trackInput = createInput('');
+  // set class
+  this.trackInput.class("formInput");
   // Color picker label
   this.colorPicker = createP('Pick a colour:');
+  // set class
+  this.colorPicker.class("formHeading");
   // Color picker input box (accessed from index.html)
   this.colorInput = select('.jscolor');
   // Button to submit form
   this.submitButton = createButton('Submit');
+  // set id 
+  this.submitButton.id("submitButton");
   // Saving label
   this.saving = createElement('h1', 'Saving...');
+  // set id
+  this.saving.id("saving");
   // Saving percentage label
   this.savingPercentage = createP('0%');
+  // set id
+  this.savingPercentage.id("savingPercentage");
 
   // Put all these DOM elements inside of formDiv
   this.formDiv.child(this.exit);
@@ -82,8 +104,6 @@ function InputForm() {
     // Set position, size and styling
     this.formDiv.position(this.x, this.y);
     this.formDiv.size(this.size, this.size);
-    this.formDiv.style("font-family", "AvenirNextLTW01-Medium");
-    this.formDiv.style("background-color", "#d9d9d9");
     
     // If not in saveMode
     if (!this.savingMode) {
@@ -98,46 +118,7 @@ function InputForm() {
       this.submitButton.show();
       this.trackName.show();
       this.trackInput.show();
-      
-      // Set styling
-      
-      this.exit.style("position","absolute");
-      this.exit.style("right","0px");
-      this.exit.style("width","20px");
-      this.exit.style("padding","5px");
-      this.exit.style("padding-bottom","20px");
-      this.exit.style("cursor","pointer");
-
-      this.title.style("color", "black");
-      this.title.style("text-align", "center");
-      this.title.style("padding-top", "10px");
-
-      this.artistName.style("color", "black");
-      this.artistName.style("text-align", "left");
-      this.artistName.style("margin-left", "10px");
-
-      this.nameInput.style("text-align", "left");
-      this.nameInput.style("margin-left", "10px");
-
-      this.trackName.style("color", "black");
-      this.trackName.style("text-align", "left");
-      this.trackName.style("margin-left", "10px");
-
-      this.trackInput.style("text-align", "left");
-      this.trackInput.style("margin-left", "10px");
-
-      this.colorPicker.style("color", "black");
-      this.colorPicker.style("text-align", "left");
-      this.colorPicker.style("margin-left", "10px");
-
-      this.colorInput.style("text-align", "left");
-      this.colorInput.style("margin-left", "10px");
-      this.colorInput.style("font-family", "AvenirNextLTW01-Medium");
-
-      this.submitButton.style("text-align", "left");
-      this.submitButton.style("margin-left", "10px");
-      this.submitButton.style("margin-top", "20px");
-      this.submitButton.style("font-family", "AvenirNextLTW01-Medium");
+     
       
     } // Else if we are in saveMode 
     else {

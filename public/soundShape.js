@@ -19,6 +19,7 @@ function SoundShape(x, y, size, track, audioPlayerSize, helpMenuSize, trackName,
   this.track = track; // Audio track
 
   this.audioPlayerSize = audioPlayerSize; // Audioplayer size
+  this.audioPlayerPos = createVector(width / 2, height / 2); // Vector for audioPlayer position
   this.helpMenuSize = helpMenuSize; // HelpMenu size
   this.shapeColor = 0; // Neutral shape color
   this.hexValue = myColor; // Hex value
@@ -190,8 +191,6 @@ function SoundShape(x, y, size, track, audioPlayerSize, helpMenuSize, trackName,
   this.audioPlayerBoundaries = function() {
     // Calculate distance between shape and middle of screen
     var distance = dist(this.position.x, this.position.y, width / 2, height / 2);
-    // Vector for audioPlayer position
-    var audioPlayerPos = createVector(width / 2, height / 2);
     // Desired separation is audioPlayer size plus 50
     var desiredSeparation = this.audioPlayerSize + 50;
 
@@ -201,7 +200,7 @@ function SoundShape(x, y, size, track, audioPlayerSize, helpMenuSize, trackName,
       // Calculate and apply force in opposite direction
       var s = pow(distance / desiredSeparation, 1 / this.ramp);
       var f = s * 9 * (this.strength * 2) * (1 / (s + 1) + ((s - 3) / 4)) / distance;
-      var df = p5.Vector.sub(this.position, audioPlayerPos);
+      var df = p5.Vector.sub(this.position, this.audioPlayerPos);
       df.mult(f);
       this.applyForce(df);
     }
@@ -319,18 +318,18 @@ function SoundShape(x, y, size, track, audioPlayerSize, helpMenuSize, trackName,
     // Draw closed shape with point location array
     beginShape();
     // First vertex is control point which must start at the end of the array
-    curveVertex(pointLocationX[this.waveForm.length - 1], pointLocationY[this.waveForm.length - 1]);
+    //curveVertex(pointLocationX[this.waveForm.length - 1], pointLocationY[this.waveForm.length - 1]);
     // For all the waveform array
     for (var i = 0, j = this.waveForm.length; i < j; i++) {
       // Add a vertex at the point location
-      curveVertex(pointLocationX[i], pointLocationY[i]);
+      vertex(pointLocationX[i], pointLocationY[i]);
     }
     // Close up vertex back at the beginning
-    curveVertex(pointLocationX[0], pointLocationY[0]);
+    //curveVertex(pointLocationX[0], pointLocationY[0]);
     // Last vertex is control point which must start at the 2nd position of the array
-    curveVertex(pointLocationX[1], pointLocationY[1]);
+    //curveVertex(pointLocationX[1], pointLocationY[1]);
     // Close shape
-    endShape();
+    endShape(CLOSE);
     // Close matrix
     resetMatrix();
 

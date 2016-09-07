@@ -48,7 +48,7 @@ var tracks = []; // Array of tracks
 var audioPlayer; // AudioPlayer object
 var helpMenu; // Help Menu object
 var myFont; // Global font style
-var sizeConstant = 1100 // Variable to help determine size of shapes;
+var sizeConstant = 1200 // Variable to help determine size of shapes;
   //var soundShapeIndex
 var randomShape; // Variable to hold random shape which is initially loaded into audioplayer
 //var songLinkIndex;
@@ -79,6 +79,8 @@ var playHeadCounter = 0; // Playhead counter variable for CircleSequencer
 var sampleShapes = []; // Array of Sample Shape objects
 var selectedSampleShape = null; // Variable used for holding a SampleShape which has been clicked on
 var tempoSlider; // Slider DOM element to control tempo
+var tempoMessage;
+var recordMessage;
 var remixMode = false; // Variable to determine if the user is in remix mode
 
 
@@ -135,14 +137,23 @@ function setup() {
   circleSequencer = new CircleSequencer();
 
   // Create a Slider DOM element, with a range between 60bpm and 140bpm, starting at 90bpm and moving in increments of 1bpm
-  tempoSlider = createSlider(60, 140, 90, 1);
+  tempoSlider = createSlider(60, 120, 90, 1);
+
+  // set ID of tempo slider
+  tempoSlider.id("tempoSlider");
+  
+  tempoMessage = createElement('h2', 'Change Tempo');
+  tempoMessage.id("tempoMessage");
+  
+  recordMessage = createElement('h2', 'Recording');
+  recordMessage.id("recordMessage");
 
   // Create a SocketIO connection on port 9000
   socket = io.connect('http://localhost:9000');
 
   // Create a BinaryJS connection on port 9000
   client = new BinaryClient('ws://localhost:9000');
-  
+
   //setInterval(myDraw, 1000/30);
   window.requestAnimationFrame(myDraw);
 
@@ -205,7 +216,7 @@ function finishSetup() {
   }
 
   everythingLoaded = true; // Set everything loaded to be true
-  
+
   console.log('finished');
 }
 
@@ -328,6 +339,8 @@ function myDraw() {
 
     // Hide the tempoSlider from view
     tempoSlider.hide();
+    tempoMessage.hide();
+    recordMessage.hide();
 
   } // Else if everything is loaded and we are in remixMode 
   else if (everythingLoaded && remixMode) {
@@ -353,7 +366,7 @@ function myDraw() {
       selectedSampleShape.posX = mouseX;
       selectedSampleShape.posY = mouseY;
     }
-    
+
     // Show tempoSlider
     tempoSlider.show();
     // Set it's position
@@ -361,16 +374,35 @@ function myDraw() {
     // Rotate it so it's vertial
     tempoSlider.style("rotate", 270);
 
-    // White color fill
-    fill(255);
-    // White color outline 
-    stroke(255);
-    // Align the text to center
-    textAlign(CENTER);
-    // Label the tempoSlider
-    text("Change Tempo", width / 2 + 465, height / 2 - 200);
-    // Update the circleSequencer bpm with values from the tempoSlider
-    circleSequencer.setTempo(tempoSlider.value());
+
+    // If you are recording
+    if (circleSequencer.recordState) {
+      // Hide tempo slider
+      tempoSlider.hide();
+      tempoMessage.hide();
+
+      recordMessage.show();
+      recordMessage.position(width / 2 + 400, height / 2);
+      
+
+    } else {
+      
+      recordMessage.hide();
+      
+      // Show tempoSlider
+      tempoSlider.show();
+      // Set it's position
+      tempoSlider.position(width / 2 + 400, height / 2 - 110);
+      // Rotate it so it's vertial
+      tempoSlider.style("rotate", 270);
+
+      tempoMessage.show();
+      tempoMessage.position(width / 2 + 380, height / 2 - 240);
+      // Update the circleSequencer bpm with values from the tempoSlider
+      circleSequencer.setTempo(tempoSlider.value());
+    }
+
+
 
     // Hide the remix button in the helpMenu
     helpMenu.remixButton.hide();
@@ -379,12 +411,15 @@ function myDraw() {
   else {
     // Hide the tempoSlider
     tempoSlider.hide();
+    tempoMessage.hide();
+    recordMessage.hide();
     // Hide the remix button in the helpMenu
     helpMenu.remixButton.hide();
     // White color fill
     fill(255);
     // Align text to center
     textAlign(CENTER);
+    textStyle(BOLD);
     // Set text size
     textSize(20);
     // Variable to hold counter position as a percentage value (ie: how many tracks have been loaded in a percentage value)
@@ -392,8 +427,8 @@ function myDraw() {
     // Write Loading and give percentage of how much is loaded
     text('LOADING' + '\n' + percentage + '%', width / 2, height / 2);
   }
-  
-  
+
+
   window.requestAnimationFrame(myDraw);
 }
 
@@ -407,5 +442,5 @@ function windowResized() {
 // Function called when key pressed
 function keyPressed() {
   // Exhibition safety measure, if something goes wrong, press escape to refresh page
-  if(keyCode === ESCAPE) location.reload();
+  if (keyCode === ESCAPE) location.reload();
 }

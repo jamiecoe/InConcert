@@ -4,6 +4,8 @@ function HelpMenu() {
 
   // Create empty Div DOM Element
   this.helpDiv = createDiv('');
+  // Set id
+  this.helpDiv.id("helpDiv");
   // Set size
   this.size = 300;
   // Set x and y to bottom right corner of the screen
@@ -20,34 +22,56 @@ function HelpMenu() {
 
   // Default message when no shape selected
   this.defaultMessage = createElement('h1', 'Click A SoundShape');
+  // Set id
+  this.defaultMessage.id("defaultMessage");
   // About Project button
   this.aboutButton = createButton('About The Project');
   // Assign it to button class so it highlights when you hover over it
   this.aboutButton.class("myButton");
+  // Set id
+  this.aboutButton.id("aboutButton");
   // Show all links button
   this.showLinksButton = createButton('Show All Connections');
   // Assign it to button class so it highlights when you hover over it
   this.showLinksButton.class("myButton");
+  // Set id
+  this.showLinksButton.id("showLinksButton")
   // About Project Title
   this.aboutTitle = createElement('h1', 'In Concert');
+  // Set id
+  this.aboutTitle.id('aboutTitle');
   // About Project description
   this.aboutDescription = createP('In Concert is a web application for an experimental music collaboration project, inspired by open-source principles. Musicians and non-musicians openly share ideas and source materials. Creativity does not exist in a vacuum.<br /><br />Listen to the SoundShapes by clicking on them and reveal their connections. Each SoundShape has an explanation of how it was made and why it is connected to other SoundShapes.<br /><br />Colour is used to represent different artists. You can click on a track\'s name in this Help Menu to skip to it<br /><br />Would you like to create your own remix?<br /><br />Some of the SoundShapes have a \'Click To Remix\' button which opens up the In Concert \'Circle Sequencer\', a fun and easy tool for making a quick remix. Record and save your remix to add your own SoundShape to In Concert.');
+  // Set id
+  this.aboutDescription.id("aboutDescription");
   // About Project back button
   this.aboutBackButton = createButton('Back');
   // Assign it to button class so it highlights when you hover over it
   this.aboutBackButton.class("myButton");
+  // Set ID
+  this.aboutBackButton.id("aboutBackButton");
   // Shape name
   this.shapeName = createElement('h1', '');
+  // Set id
+  this.shapeName.id("shapeName");
   // Short description of the shape
   this.shapeDescription = createP('');
+  // Set id
+  this.shapeDescription.id("shapeDescription");
   // Button to go into remix mode
   this.remixButton = createButton('Click To Remix');
   // Assign it to button class so it highlights when you hover over it
   this.remixButton.class("myButton");
+  // Set id
+  this.remixButton.id("remixButton");
   // Child list title
   this.childTitle = createElement('h2', 'Child List');
+  // set id
+  this.childTitle.id("childTitle");
   // List of children paragraph
   this.childList = createP('');
+  // set id
+  this.childList.id("childList");
   // Empty array for links to the tracks
   this.linksToTrack = [];
   // Link Index
@@ -100,14 +124,7 @@ function HelpMenu() {
     // Set position, size and all styling for helpDiv
     this.helpDiv.position(this.x, this.y);
     this.helpDiv.size(this.size, this.size);
-    this.helpDiv.style("font-family", "AvenirNextLTW01-Medium");
-    this.helpDiv.style("background-color", "black");
-    this.helpDiv.style("border", "1px");
-    this.helpDiv.style("border-style", "dashed");
-    this.helpDiv.style("border-color", "white");
-    this.helpDiv.style("overflow", "scroll");
-    this.helpDiv.style("overflow-x", "hidden");
-    this.helpDiv.style("overflow-y", "scroll");
+   
 
     // If no shape selected
     if (!this.shapeSelected && !this.aboutOn) {
@@ -121,56 +138,16 @@ function HelpMenu() {
       this.childTitle.hide();
       this.childList.hide();
 
-      // Show default message / aboutButton / showLinksButton and do all the styling
+      // Show default message / aboutButton / showLinksButton
       this.defaultMessage.show();
-      this.defaultMessage.style("color", "white");
-      this.defaultMessage.style("text-align", "center");
-      this.defaultMessage.style("top", "40%");
-      this.defaultMessage.style("margin-left", "10px");
-
+      
       this.aboutButton.show();
-      this.aboutButton.style("margin", "auto");
-      this.aboutButton.style("margin", "0");
-      this.aboutButton.style("position", "absolute");
-      this.aboutButton.style("text-align", "center");
-      this.aboutButton.style("bottom", "35%");
-      this.aboutButton.style("left", "50%");
-      this.aboutButton.style("margin-right", "-50%")
-      this.aboutButton.style("transform", "translate(-50%, -50%)");
-      this.aboutButton.style("color", "white");
-      this.aboutButton.style("border", "1px");
-      this.aboutButton.style("border-radius", "2px");
-      this.aboutButton.style("border-style", "solid");
-      this.aboutButton.style("border-color", "white");
-      this.aboutButton.style('cursor', 'pointer');
-      this.aboutButton.style("padding", "10px 24px");
-      this.aboutButton.style("font-size", "16px");
-      this.aboutButton.style("font-family", "AvenirNextLTW01-Medium");
       // If aboutButton pressed, callback function showAboutProject
       this.aboutButton.mousePressed(function() {
         helpMenu.aboutOn = true;
       });
 
-
       this.showLinksButton.show();
-      //this.aboutButton.position(10, 10);
-      this.showLinksButton.style("margin", "auto");
-      this.showLinksButton.style("margin", "0");
-      this.showLinksButton.style("position", "absolute");
-      this.showLinksButton.style("text-align", "center");
-      this.showLinksButton.style("bottom", "15%");
-      this.showLinksButton.style("left", "50%");
-      this.showLinksButton.style("margin-right", "-50%")
-      this.showLinksButton.style("transform", "translate(-50%, -50%)");
-      this.showLinksButton.style("color", "white");
-      this.showLinksButton.style("border", "1px");
-      this.showLinksButton.style("border-radius", "2px");
-      this.showLinksButton.style("border-style", "solid");
-      this.showLinksButton.style("border-color", "white");
-      this.showLinksButton.style('cursor', 'pointer');
-      this.showLinksButton.style("padding", "10px 24px");
-      this.showLinksButton.style("font-size", "16px");
-      this.showLinksButton.style("font-family", "AvenirNextLTW01-Medium");
       // If showLinksButton pressed, callback function showAllLinks
       this.showLinksButton.mousePressed(showAllLinks);
 
@@ -184,28 +161,7 @@ function HelpMenu() {
       this.aboutTitle.show();
       this.aboutDescription.show();
       this.aboutBackButton.show();
-
-      // Styling 
-      this.aboutTitle.style("color", "white");
-      this.aboutTitle.style("text-align", "center");
-      this.aboutTitle.style("padding", "0", "5px");
       
-      this.aboutDescription.style("color", "white");
-      this.aboutDescription.style("text-align", "left");
-      this.aboutDescription.style("margin-left", "10px");
-      this.aboutDescription.style("margin-right", "10px");
-      
-      this.aboutBackButton.style("margin", "auto");
-      this.aboutBackButton.style("margin-bottom", "20px");
-      this.aboutBackButton.style("color", "white");
-      this.aboutBackButton.style("border", "1px");
-      this.aboutBackButton.style("border-radius", "2px");
-      this.aboutBackButton.style("border-style", "solid");
-      this.aboutBackButton.style("border-color", "white");
-      this.aboutBackButton.style('cursor', 'pointer');
-      this.aboutBackButton.style("padding", "10px 24px");
-      this.aboutBackButton.style("font-size", "16px");
-      this.aboutBackButton.style("font-family", "AvenirNextLTW01-Medium");
       // If aboutButton pressed, go back to default message
       this.aboutBackButton.mousePressed(function() {
         helpMenu.aboutOn = false;
@@ -228,19 +184,8 @@ function HelpMenu() {
 
       // Only show remix button for tracks with samples 
       if (data.tracks[samplesId].trackSamplesPath.length > 1) {
-        // Show remix button along with all the styling
+        // Show remix button
         this.remixButton.show();
-        this.remixButton.style("margin", "auto");
-        this.remixButton.style("margin-bottom", "20px");
-        this.remixButton.style("color", "white");
-        this.remixButton.style("border", "1px");
-        this.remixButton.style("border-radius", "2px");
-        this.remixButton.style("border-style", "solid");
-        this.remixButton.style("border-color", "white");
-        this.remixButton.style('cursor', 'pointer');
-        this.remixButton.style("padding", "10px 24px");
-        this.remixButton.style("font-size", "16px");
-        this.remixButton.style("font-family", "AvenirNextLTW01-Medium");
         // If remix button pressed, callback function remix
         this.remixButton.mousePressed(remix);
       } // Otherwise, if track doesn't have samples, don't show remix button 
@@ -281,34 +226,15 @@ function HelpMenu() {
 
         // Update these with remix title and description
         this.shapeName.html('Create a Remix');
-        this.shapeDescription.html('Drag the SampleShapes onto the white circles (make sure they lock in).<br /><br />To record your remix, press the <span id="red">red</span> button in the middle of the Circle Sequencer. Hint: You can still move the SampleShapes and change the tempo while you are recording your remix.<br /><br />Press the <span id="green">green</span> button to finish recording.');
+        this.shapeDescription.html('Drag the SampleShapes onto the white circles (make sure they lock in).<br /><br />To record your remix, press the <span id="red">red</span> button in the middle of the Circle Sequencer.<br /><br />Press the <span id="green">green</span> button to finish recording.');
 
         // New styling 
         this.shapeName.style("color", "white");
-        this.shapeName.style("text-align", "center");
-        this.shapeName.style("padding", "0", "5px");
-        this.shapeDescription.style("color", "white");
-        this.shapeDescription.style("text-align", "left");
-        this.shapeDescription.style("margin-left", "10px");
 
       } // Else, if not in remix mode 
       else {
         // Styling for shapeName
         this.shapeName.style("color", this.currentSoundShape.hexValue);
-        this.shapeName.style("text-align", "center");
-        this.shapeName.style("padding", "0", "5px");
-        // Styling for shapeDescription
-        this.shapeDescription.style("color", "white");
-        this.shapeDescription.style("text-align", "left");
-        this.shapeDescription.style("margin-left", "10px");
-        this.shapeDescription.style("margin-right", "10px");
-        // Styling for ChildTitle
-        this.childTitle.style("color", "white");
-        this.childTitle.style("text-align", "left");
-        this.childTitle.style("margin-left", "10px");
-        // Styling for ChildList
-        this.childList.style("text-align", "left");
-        this.childList.style("margin-left", "10px");
       }
     }
   }
