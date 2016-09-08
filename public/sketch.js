@@ -217,7 +217,7 @@ function finishSetup() {
 
   everythingLoaded = true; // Set everything loaded to be true
 
-  console.log('finished');
+  
 }
 
 
@@ -228,8 +228,11 @@ function mousePressed() {
   if (!remixMode) {
     // Check if you've clicked on a soundShape and play it with the audioPlayer
     audioPlayer.checkSoundShapes();
-    // Use the audioPlayer manual controls with the mouse
-    audioPlayer.newManualControls(mouseX, mouseY);
+    
+    if(selectedSoundShape === null) {
+      // Use the audioPlayer manual controls with the mouse
+      audioPlayer.newManualControls(mouseX, mouseY);
+    }
 
     // For all the soundShapes
     for (var i = 0, j = soundShapes.length; i < j; i++) {
@@ -280,7 +283,7 @@ function mouseReleased() {
 // Function called when a pressed mouse is dragged
 function mouseDragged() {
   // Use the audioPlayer manuel controls
-  audioPlayer.newManualControls(mouseX, mouseY);
+  if(selectedSoundShape === null) audioPlayer.newManualControls(mouseX, mouseY);
 }
 
 
