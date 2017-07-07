@@ -1,0 +1,27 @@
+{
+  "name": "inconcert",
+  "version": "1.0.0",
+  "description": "In Concert is a web application for an experimental music collaboration project, inspired by open-source principles. Musicians and non-musicians openly share ideas and source materials. Creativity does not exist in a vacuum.",
+  "main": "binaryServer.js",
+  "dependencies": {
+    "jsonfile": "^2.3.1",
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8",
+    "binaryjs": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node binaryServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiecoe/InConcert.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiecoe/InConcert/issues"
+  },
+  "homepage": "https://github.com/jamiecoe/InConcert#readme"
+}
