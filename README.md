@@ -1,5 +1,7 @@
 # InConcert
 
+View video demo [here](https://vimeo.com/182080867).
+
 In Concert is a web application for an experimental music collaboration project, inspired by open-source principles. Musicians and non-musicians openly share ideas and source materials. Creativity does not exist in a vacuum.
 
 The code has mainly been written using p5.js, with some additional server-side code with Node.js. All client side code is divided into a number of classes with the main action happening in sketch.js.
